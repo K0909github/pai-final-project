@@ -39,7 +39,7 @@ python3 voice_commander_turtle.py
 2. Gazebo + ロボットアーム版
 物理シミュレーションが不安定なため、環境によっては正常に動作しない可能性があります。
 
-2**-1. Gazeboの起動**
+**2-1. Gazeboの起動**
 
 ```bash
 ros2 launch crane_plus_gazebo crane_plus_with_table.launch.py
