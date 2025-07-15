@@ -23,7 +23,7 @@ AIの音声認識モデル「Whisper」を使い、ROS 2のロボットを声で
 **1-1. turtlesimの起動**
 ```bash
 ros2 run turtlesim turtlesim_node
-```bash
+```
 
 **1-2. 音声ファイルの準備**
 
@@ -35,6 +35,7 @@ ros2 run turtlesim turtlesim_node
 ```bash
 cd turtlesim_ver
 python3 voice_commander_turtle.py
+```
 2. Gazebo + ロボットアーム版
 物理シミュレーションが不安定なため、環境によっては正常に動作しない可能性があります。
 
@@ -42,6 +43,7 @@ python3 voice_commander_turtle.py
 
 ```bash
 ros2 launch crane_plus_gazebo crane_plus_with_table.launch.py
+```
 **2-2. 音声ファイルの準備**
 
 音声ファイルをgazebo_verフォルダ内に配置してください。
@@ -50,7 +52,10 @@ ros2 launch crane_plus_gazebo crane_plus_with_table.launch.py
 
 ```bash
 cd gazebo_ver
+```
+```bash
 python3 voice_commander_arm.py
+```
 **開発過程での工夫と考察**
 当初、より高度なGazebo環境での実装を目指しましたが、物理シミュレーションの不安定性という問題に直面しました。
 
