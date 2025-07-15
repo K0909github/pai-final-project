@@ -23,7 +23,7 @@ AIの音声認識モデル「Whisper」を使い、ROS 2のロボットを声で
 **1-1. turtlesimの起動**
 ```bash
 ros2 run turtlesim turtlesim_node
-
+```bash
 
 **1-2. 音声ファイルの準備**
 
