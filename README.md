@@ -36,7 +36,8 @@ ros2 run turtlesim turtlesim_node
 cd turtlesim_ver
 python3 voice_commander_turtle.py
 ```
-2. Gazebo + ロボットアーム版
+###2. Gazebo + ロボットアーム版
+
 物理シミュレーションが不安定なため、環境によっては正常に動作しない可能性があります。
 
 **2-1. Gazeboの起動**
