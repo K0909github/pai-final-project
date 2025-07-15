@@ -34,6 +34,8 @@ ros2 run turtlesim turtlesim_node
 
 ```bash
 cd turtlesim_ver
+```
+```bash
 python3 voice_commander_turtle.py
 ```
 
