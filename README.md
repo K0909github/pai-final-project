@@ -1,10 +1,9 @@
-# pai-final-project
-
 # PAI最終課題: 音声認識AIによるロボット制御
 
 AIの音声認識モデル「Whisper」を使い、ROS 2のロボットを声で動かすプロジェクトです。
 
 ## プロジェクト概要
+
 本リポジトリには、2つのバージョンの実装が含まれています。
 
 1.  **turtlesim版（完成版）:**
@@ -18,8 +17,42 @@ AIの音声認識モデル「Whisper」を使い、ROS 2のロボットを声で
 ## 実行方法
 
 ### 1. turtlesim版（推奨）
+
 安定して動作するバージョンです。
 
 **1-1. turtlesimの起動**
 ```bash
 ros2 run turtlesim turtlesim_node
+1-2. 音声ファイルの準備
+
+「前」「右」などと録音した音声ファイル(m4a形式)をturtlesim_verフォルダ内に配置してください。
+（スクリプト内のaudio_file変数を、用意したファイル名に変更してください）
+
+1-3. スクリプトの実行
+
+Bash
+
+cd turtlesim_ver
+python3 voice_commander_turtle.py
+2. Gazebo + ロボットアーム版
+物理シミュレーションが不安定なため、環境によっては正常に動作しない可能性があります。
+
+2-1. Gazeboの起動
+
+Bash
+
+ros2 launch crane_plus_gazebo crane_plus_with_table.launch.py
+2-2. 音声ファイルの準備
+
+音声ファイルをgazebo_verフォルダ内に配置してください。
+
+2-3. スクリプトの実行
+
+Bash
+
+cd gazebo_ver
+python3 voice_commander_arm.py
+開発過程での工夫と考察
+当初、より高度なGazebo環境での実装を目指しましたが、物理シミュレーションの不安定性という問題に直面しました。
+
+原因切り分けの結果、課題の核心である「AIによる制御ロジック」を明確に示すため、安定したturtlesim環境で最終的な実装を完成させるという判断を行いました。これにより、AIの推論結果を確実にロボットの動作に繋げるシステムの構築に成功しました。
